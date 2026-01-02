@@ -15,7 +15,7 @@ Future<List<ForecastModel>> fetchForecast(context, city) async {
     if (result) {
       client = http.Client();
       var url = Uri.parse(
-          'https://api.openweathermap.org/data/2.5/forecast?q=$city&appid=c7a7e62a2a92fa56f18acff2a77e5ee9');
+          'https://api.openweathermap.org/data/2.5/forecast?q=$city&appid=');
       final response = await client.get(url);
       if (response.statusCode == 200) {
         var jsonResponse = json.decode(response.body);
